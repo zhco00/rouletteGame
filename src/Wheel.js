@@ -1,3 +1,4 @@
+import Phaser from 'phaser';
 import { gameOptions } from "./gameOptions.js";
 
 export class Wheel {

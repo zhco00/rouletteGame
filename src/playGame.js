@@ -1,3 +1,4 @@
+import Phaser from 'phaser';
 import { gameOptions, secondWheelOptions } from "./gameOptions.js";
 import { Wheel } from "./Wheel.js";
 import { createPin } from "./createPin.js";
@@ -19,14 +20,14 @@ class playGame extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("pin", "/assets/button.png");
-    this.load.image("unpin", "/assets/unButton.png");
-    this.load.image("abutton", "/assets/button_a.png");
-    this.load.image("bbutton", "/assets/button_b.png");
-    this.load.image("abbutton", "/assets/button_ab.png");
-    this.load.image("activeButtonA", "/assets/active_button_a.png");
-    this.load.image("activeButtonB", "/assets/active_button_b.png");
-    this.load.image("activeButtonAB", "/assets/active_button_ab.png");
+    this.load.image("pin", "./assets/button.png");
+    this.load.image("unpin", "./assets/unButton.png");
+    this.load.image("abutton", "./assets/button_a.png");
+    this.load.image("bbutton", "./assets/button_b.png");
+    this.load.image("abbutton", "./assets/button_ab.png");
+    this.load.image("activeButtonA", "./assets/active_button_a.png");
+    this.load.image("activeButtonB", "./assets/active_button_b.png");
+    this.load.image("activeButtonAB", "./assets/active_button_ab.png");
   }
 
   create() {
@@ -129,16 +130,18 @@ class playGame extends Phaser.Scene {
 }
 
 window.onload = function () {
-  let gameConfig = {
+  const gameConfig = {
+    type: Phaser.AUTO,
     scale: {
       mode: Phaser.Scale.FIT,
       autoCenter: Phaser.Scale.CENTER_BOTH,
-      parent: "thegame",
-      width: 600,
-      height: 1400,
+      width: 600, // 게임 화면의 너비
+      height: 1400, // 게임 화면의 높이
+      parent: 'thegame',
     },
-    backgroundColor: "#e9e9ea",
-    scene: [playGame],
+    backgroundColor: '#d7d7d7',
+    scene: [playGame], // 게임 장면 설정
   };
-  window.game = new Phaser.Game(gameConfig);
+  console.log(Phaser);
+  new Phaser.Game(gameConfig);
 };

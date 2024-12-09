@@ -1,3 +1,4 @@
+import Phaser from 'phaser';
 export function createPin() {
   this.pin = this.add
     .sprite(this.scale.width / 2, this.scale.height / 2 + 100, "pin")
