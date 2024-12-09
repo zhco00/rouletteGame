@@ -1,5 +1,13 @@
 {
+  "homepage": "https://zhco00.github.io/rouletteGame/",
   "devDependencies": {
     "vite": "^6.0.3"
+  },
+  "dependencies": {
+    "gh-pages": "^6.2.0"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   }
 }
