@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: "CookieRun";
+            src: url("assets/fonts/Jalnan2.otf") format("opentype");
+        }
+        body {
+            background: #000000;
+            padding: 0px;
+            margin: 0px;
+            font-family: "CookieRun", sans-serif;
+        }
+        #resetButton {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+        #modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #000000;
+            max-height: 80%;
+            overflow-y: auto;
+        }
+        #modal input {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script src="phaser.min.js"></script>
+    <script type="module" src="./src/gameOptions.js"></script>
+    <script type="module" src="./src/Wheel.js"></script>
+    <script type="module" src="./src/playGame.js"></script>
+</head>
+<body>
+    <div id="thegame"></div>
+    <button id="resetButton">재설정</button>
+    <div id="modal">
+        <h2>룰렛 값 변경</h2>
+        <div id="innerWheelInputs"></div>
+        <div id="outerWheelInputs"></div>
+        <button id="updateButton">변경하기</button>
+    </div>
+</body>
+</html>
