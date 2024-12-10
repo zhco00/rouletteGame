@@ -2,7 +2,7 @@ import { gameOptions, secondWheelOptions } from "./gameOptions.js";
 
 export function createPrizeText() {
   // 박스 스타일 정의
-  const boxWidth = 300;
+  const boxWidth = 400;
   const boxHeight = 60;
   const boxBackgroundColor = 0xffffff; // 흰색
   const boxBorderColor = 0xc0c0c0; // 연한 회색
@@ -43,7 +43,7 @@ export function createPrizeText() {
       this.scale.width / 2,
       this.scale.height / 2 - secondWheelOptions.wheelRadius - 90, // A 룰렛 텍스트 위치
       "A룰렛 결과",
-      { font: "18px Arial", color: "#808080" } // 텍스트 스타일
+      { font: "20px Arial", color: "#000" } // 텍스트 스타일
     )
     .setOrigin(0.5);
 
@@ -73,7 +73,7 @@ export function createPrizeText() {
       this.scale.width / 2,
       this.scale.height / 2 - gameOptions.wheelRadius - 90, // B 룰렛 텍스트 위치
       "B룰렛 결과",
-      { font: "18px Arial", color: "#808080" } // 텍스트 스타일
+      { font: "20px Arial", color: "#000" } // 텍스트 스타일
     )
     .setOrigin(0.5);
 

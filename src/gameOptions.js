@@ -14,7 +14,7 @@ export const gameOptions = {
   ],
   rotationTimeRange: { min: 3000, max: 4500 },
   wheelRounds: { min: 2, max: 11 },
-  wheelRadius: 240,
+  wheelRadius: 300,
   strokeColor: 0xffffff,
   strokeWidth: 5,
 };
@@ -60,5 +60,5 @@ export const secondWheelOptions = {
       textColor: "#000000",
     },
   ],
-  wheelRadius: 288,
+  wheelRadius: 350,
 };

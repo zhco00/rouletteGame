@@ -1,6 +1,6 @@
 export function createButtons() {
-  let buttonSpacing = 40;
-  let buttonY = 100; // 버튼의 Y 위치 조정
+  let buttonSpacing = 80;
+  let buttonY = 40; // 버튼의 Y 위치 조정
 
   let abuttonWidth = this.textures.get("abutton").getSourceImage().width;
   let bbuttonWidth = this.textures.get("bbutton").getSourceImage().width;
